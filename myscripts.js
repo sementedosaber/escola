@@ -1,5 +1,6 @@
 // Tiny Slider
 
+
 var slider = tns({
   container: ".slider",
   items: 3,
