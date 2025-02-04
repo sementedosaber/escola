@@ -1,644 +1,157 @@
-
 <!DOCTYPE html>
-<html>
-  <body>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Tilt+Neon&display=swap");
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>C.E.S.S</title>
+        <link href="./elementos/estilo.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins"
+            rel="stylesheet">
+            <link rel="stylesheet" href="./elementos/responsividade.css">
+        <link rel="shortcut icon" href="./imagens/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <header class="cabecalho">
+            <div><img src="./imagens/imageedit_2_2177156324.png"
+                    class="logo"></div><ul>
+                <a href="./index.html"><li class="li-cb">Inicio</li></a>
+                <a href="matricula.php"><li
+                        class="li-cb">Matricula</li></a>
+                <a href="portaldoaluno.php"><li class="li-cb">Portal
+                        do Aluno</li></a>
+                <a href="poltaldoprofessor.php"><li
+                        class="li-cb">Area do Professor</li></a>
+                <li class="li-cb" id="pesquisa-li"><img class="pesquisa-img"
+                        src="./imagens/pesquisa.png" /><input type="text"
+                        class="pesquisa-txt" placeholder="pesquisar" /></li>
+                <a href="#Contato"><li class="li-cb">Contato</li></a>
+            </ul>
+        </header>
+        <main>
+            <section><article><img
+                        src="./imagens/59 Sem Título.png"
+                        class="imagem-principal"></article></section>
+            <div class="titulo-escola"><h1>C.E.S.S 2025™</h1></div>
+            <section class="Sobre">
+                <p>O <strong> Educacional Semente do Saber:</strong> O Melhor
+                    Caminho para o Futuro do seu Filho</p>
 
-@property --gradient-angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
+                <p>A Escola Semente do Saber é a escolha ideal para pais que
+                    desejam proporcionar uma educação de qualidade,
+                    inclusiva e completa para seus filhos. Com uma estrutura
+                    moderna e um corpo docente altamente qualificado,
+                    oferecemos desde a educação infantil até a preparação para o
+                    Enem, garantindo um aprendizado significativo
+                    em todas as fases da vida escolar.
+                </p>
+                <p><strong>Diferenciais da Nossa Escola</strong></p>
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-img {
-  width: 100%;
-  pointer-events: none;
-  user-select: none;
-}
-
-/* SECTION - HOME */
-
-.home {
-  display: grid;
-  grid-template-columns: 45% 50%;
-  place-items: center;
-  gap: 50px;
-  background: rgb(67, 69, 112);
-  background: radial-gradient(
-    circle,
-    #4d7b57 3%,
-    rgba(35, 36, 57, 1) 60%
-  );
-  overflow: hidden;
-  padding: 130px 80px;
-}
-
-.description {
-  color: #fff;
-  padding: 0 50px;
-}
-
-.description h1 {
-  font-family: "Tilt Neon", sans-serif;
-  font-size: clamp(3rem, 5vw, 4rem);
-  line-height: 1.1;
-  margin-bottom: 30px;
-}
-
-.gradient-text {
-  font-family: "Tilt Neon", sans-serif;
-  background-image: linear-gradient(
-    90deg,
-    rgb(118, 167, 63) 0%,
-    rgb(51, 143, 118) 40%,
-    rgb(55, 141, 167) 50%,
-    rgb(117, 152, 242) 70%,
-    rgb(144, 118, 236) 100%
-  );
-  color: transparent;
-  background-size: contain;
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
-.description p {
-  font-family: "Nunito", sans-serif;
-  font-size: clamp(0.9rem, 3vw, 1.1rem);
-  line-height: 1.5;
-  margin-bottom: 30px;
-}
-
-#form {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
-input {
-  padding-inline-end: 10px;
-  padding-inline-start: 10px;
-  background-color: transparent;
-  outline: transparent;
-  border: 0;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-  margin-right: 10px;
-  transition: all 0.3s ease-in;
-  -webkit-transition: all 0.3s ease-in;
-}
-
-input::placeholder {
-  color: rgb(117, 152, 242);
-  opacity: 0.5;
-  font-weight: 500;
-}
-
-input[type="email"] {
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-input[type="email"]:focus {
-  border: transparent;
-  outline: 2px dotted rgb(117, 152, 242);
-  outline-offset: -3px;
-}
-
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3px;
-  max-width: max-content;
-  background: linear-gradient(
-    90deg,
-    rgb(118, 167, 63) 0%,
-    rgb(51, 143, 118) 40%,
-    rgb(55, 141, 167) 50%,
-    rgb(117, 152, 242) 70%,
-    rgb(144, 118, 236) 100%
-  );
-  background-size: 200%;
-  background-position: left;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 500;
-  border: 0;
-  padding: 12px 16px;
-  border-radius: 5px;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5),
-    inset 0px 2px 2px rgba(255, 255, 255, 0.2);
-  cursor: pointer;
-  transition: all 0.3s ease-in;
-}
-
-.btn:hover {
-  background-position: right;
-}
-
-.users-color-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.item {
-  max-width: 200px;
-  aspect-ratio: 1/1;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5),
-    inset 0px 2px 2px rgba(255, 255, 255, 0.2);
-  animation: fadeIn 0.5s linear 1 forwards;
-  animation-delay: calc(0.2s * var(--i));
-  opacity: 0;
-}
-
-.item:nth-child(1) {
-  background-color: #67d7e1;
-  border-radius: 50% 50% 0 50%;
-}
-
-.item:nth-child(2) {
-  border-radius: 50% 50% 0 0;
-}
-
-.item:nth-child(3) {
-  background-color: #6cc164;
-  border-radius: 50%;
-}
-
-.item:nth-child(4) {
-  border-radius: 0 0 0 50%;
-}
-
-.item:nth-child(5) {
-  border-radius: 0 50% 50% 0;
-}
-
-.item:nth-child(6) {
-  background-color: #8071a8;
-  border-radius: 0 50% 50% 50%;
-}
-
-.item:nth-child(7) {
-  border-radius: 50% 50% 0 50%;
-}
-
-.item:nth-child(8) {
-  background-color: #fe7519;
-  border-radius: 50% 0 0 50%;
-}
-
-.item:nth-child(9) {
-  background-color: #f5bec3;
-  border-radius: 0 50% 50% 0;
-}
-
-.item:nth-child(10) {
-  border-radius: 50%;
-}
-
-.item:nth-child(11) {
-  background-color: #fcd659;
-  border-radius: 50% 0 50% 50%;
-}
-
-.item:nth-child(12) {
-  border-radius: 50% 0 0 0;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* SECTION - CARD CONTAINER */
-
-.card-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
-  min-height: 100vh;
-  background: rgb(67, 69, 112);
-  background: radial-gradient(
-    square,
-    rgba(67, 69, 112, 1) 3%,
-    rgba(35, 36, 57, 1) 60%
-  );
-  overflow: hidden;
-  padding: 60px 50px 20px;
-}
-
-.card {
-  max-width: 300px;
-  aspect-ratio: 3/5;
-  border-radius: 15px;
-  margin: 20px;
-  overflow: hidden;
-  border-top: 1px solid rgba(255, 255, 255, 0.7);
-  border-left: 1px solid rgba(255, 255, 255, 0.7);
-  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5),
-    inset 0px 2px 2px rgba(255, 255, 255, 0.2);
-  cursor: grab;
-}
-
-.content {
-  position: relative;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(9, 1fr);
-  padding: 20px;
-  background: rgba(104, 104, 104, 0.5);
-  user-select: none;
-}
-
-.content::before,
-.content::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  border-radius: inherit;
-  background: conic-gradient(
-    from var(--gradient-angle),
-    rgb(109, 186, 22),
-    rgb(30, 119, 95),
-    rgb(55, 141, 167),
-    rgb(59, 91, 174),
-    rgb(144, 118, 236),
-    rgb(59, 91, 174),
-    rgb(55, 141, 167),
-    rgb(30, 119, 95),
-    rgb(109, 186, 22)
-  );
-  animation: rotation 8s linear infinite;
-}
-
-.content::after {
-  filter: blur(30px);
-}
-
-@keyframes rotation {
-  0% {
-    --gradient-angle: 0deg;
-  }
-  100% {
-    --gradient-angle: 360deg;
-  }
-}
-
-.content img {
-  aspect-ratio: 3/2;
-  border-radius: 10px;
-  grid-row: 1 / 5;
-  margin-bottom: 20px;
-  user-select: none;
-  object-fit: cover;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
-}
-
-.content h1 {
-  font-size: 1.2rem;
-  color: #fff;
-  text-align: center;
-  grid-row: 5 / 6;
-}
-
-.content p {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #fff;
-  grid-row: 6 / 9;
-}
-
-.btn-grad {
-  background-image: linear-gradient(
-    to right,
-    #ece9e6 0%,
-    #ffffff 51%,
-    #ece9e6 100%
-  );
-  padding: 8px 12px;
-  color: #000;
-  box-shadow: 0 0 5px #eee;
-  outline: 0;
-  font-size: 0.9rem;
-  font-weight: 400;
-  grid-row: 9 / 10;
-  margin: 4px auto 8px;
-  cursor: pointer;
-  transition: all 0.5s ease-in;
-}
-
-.control {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  gap: 14px;
-}
-
-.control li {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to bottom, #559b9a, #3b3d8a);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5),
-    inset 0px 4px 4px rgba(255, 255, 255, 0.2);
-  padding: 12px;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  color: #fff;
-  cursor: pointer;
-  transform: scale(1);
-}
-
-.control li::before {
-  position: absolute;
-  content: "";
-  inset: 0;
-  background: linear-gradient(to right, #559b9a, #3b3d8a);
-  border-radius: 50%;
-  z-index: -1;
-  transition: all 0.5s ease-in;
-  opacity: 0;
-}
-
-.control li:hover::before {
-  opacity: 1;
-}
-
-@media (max-width: 1215px) {
-  .btn {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 1015px) {
-  .home {
-    grid-template-columns: 45% 50%;
-    gap: 50px;
-    padding: 140px 50px;
-  }
-
-  .btn {
-    padding: 8px 12px;
-  }
-}
-
-@media (max-width: 865px) {
-  .home {
-    grid-template-columns: 45% 50%;
-    gap: 60px;
-    padding: 130px 70px;
-  }
-  
-  .users-color-container {
-    gap: 15px;
-  }
-}
-
-@media (max-width: 815px) {
-  .home {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      "userscolorcontainer"
-      "description";
-    gap: 30px;
-    padding: 90px 80px 70px;
-  }
-
-  .users-color-container {
-    grid-area: userscolorcontainer;
-    gap: 20px;
-  }
-
-  .description {
-    grid-area: description;
-    padding: 0;
-    text-align: center;
-  }
-
-  #form {
-    justify-content: center;
-  }
-}
-
-
-@media (max-width: 460px) {
-   .home {
-    gap: 0;
-    padding: 30px 40px;
-  }
-  
-  #form {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    margin-top: 20px;
-  }
-  
-  input[type="email"]:focus {
-    outline-offset: 6px;
-  }
-
-}
+                <p>✨ Inclusão e Acolhimento : Acreditamos que todos merecem
+                    oportunidades iguais para aprender e se desenvolver.
+                    Por isso, a Escola Semente do Saber é totalmente inclusiva,
+                    oferecendo suporte especializado para crianças
+                    com autismo e outras deficiências. Contamos com uma sala de
+                    adaptação, onde cada aluno recebe o atendimento
+                    necessário para seu crescimento acadêmico e social.
+                </p>
+                <p>🎓 Ensino de Excelência : Nosso ensino é pautado na formação
+                    integral dos alunos, com um currículo moderno e
+                    interdisciplinar. Temos um ensino bilíngue, que permite que
+                    os alunos aprendam inglês desde cedo,
+                    proporcionando vantagens competitivas no futuro.
+                </p>
+             
+               
+            </section>
 
 
 
-    </style>
+            <section class="Sobre">
+                <p>🎨 <strong>Atividades Extracurriculares :</strong> Acreditamos que a educação
+                    vai além da sala de aula! Oferecemos diversas atividades
+                    extracurriculares para estimular habilidades motoras,
+                    cognitivas e sociais, como:
+                </p>
+                <ul class="lista-extracurriculares">
+                    <li>Karate</li>
+                    <li>Ballet</li>
+                    <li>Boxe</li>
+                    <li>Vôlei</li>
+                    <li>Futebol</li>
+                    <li>Basquete</li>
+                    <li>Ping Pong</li>
+                </ul>
 
-    <section class="home">
-      <div class="description">
-        <h1 class="title">
-          <span class="gradient-text">CENTRO EDUCACIONAL</span> SEMENTE DO SABER
-        </h1>
-        <p class="paragraph">
-         A melhor opção de ensino para o seu filho(a), localizada no municipio de castanhal-Pa.
+                <p>🏚️ Infraestrutura Completa : Nossa escola possui um espaço
+                    amplo e seguro, com ambientes projetados para garantir o
+                    bem-estar e o aprendizado das crianças. Contamos com:
+                </p>
+                <ul class="lista-extracurriculares">
+                    <li>Brinquedoteca</li>
+                    <li>Biblioteca e sala de leitura</li>
+                    <li>Quadra poliesportiva</li>
+                    <li>Parque Infantil</li>
+                    <li>Futebol</li>
+                    <li>Basquete</li>
+                    <li>Ping Pong</li>
+                </ul>
+
+            </section>
+
+
+            
+           
+    <h2>Aulas de karate</h2>
+   
+        <iframe src="https://www.youtube.com/embed/v4wZ02waQMU" title="karate kid alunos centro educacional semente do saber professora Cristiane Gildo professor Josué" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"  allowfullscreen></iframe>
+   
+
+    <section>
+<p>Passeios escolares voltado para o ensino alem do padrao dentro da sala de aula.</p>
+
+          <img src="/sementedosaber/imagens/Snapinst.app_475381010_1086774136559244_203529382623485808_n_1080.jpg" class="passeios"alt="">
+       </p>
+           </section>
+           <section id="Contato">
+           <p>  <b>🏡 Venha Conhecer Nossa Escola!
+            Na Escola Semente do Saber, nós cultivamos o conhecimento com amor,
+            dedicação e respeito. Agende uma visita e venha fazer parte dessa
+            jornada de aprendizado e crescimento!
+        </b>
         </p>
-        <p  class="paragraph">
-          venha nos conhecer, como uma escola de ensino amplo da creche ao pré-Enem.
+           <p> 📞 Contato: 
+            WhatsApp: (91)
+                    4711-4239
+                </p>
+          <p>  🏢 Endereço:
+            📍AV. Barão de Cametá, 06 Imperador, Castanhal
         </p>
-        <form id="form" autocomplete="off">
-          <input
-            type="email"
-            id="email-id"
-            name="email_address"
-            aria-label="email adress"
-            placeholder=""
-            required
-            oninput="checkEmpty()" />
-          <button type="submit" class="btn" aria-label="submit">
-            <span>MATRICULAR</span>
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-          </button>
-        </form>
-      </div>
-
-      <div class="users-color-container">
-        <span class="item" style="--i: 1"></span>
-        <img
-          class="item"
-          src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/274f29ce-0d3f-4ac2-a2aa-f9b7bd188b2a"
-          style="--i: 2"
-          alt="" />
-        <!--
--->
-        <span class="item" style="--i: 3"></span>
-        <img
-          class="item"
-          src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/b8a14493-3d9f-4b9b-b93a-56d0bc7243e9"
-          style="--i: 4"
-          alt="" />
-
-        <img
-          class="item"
-          src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/03e51e1e-9750-45a5-b75e-a1e341d4562a"
-          style="--i: 10"
-          alt="" />
-        <span class="item" style="--i: 11"></span>
-        <img class="item" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/5eb50f89-3e5a-480e-860c-8d40d3ba9ffe" style="--i: 12" alt="" />
-        <span class="item" style="--i: 5"></span>
-
-        <span class="item" style="--i: 9"></span>
-        <img class="item" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/86c71a79-2efe-4567-8665-b1e5a1fd9735" style="--i: 8" alt="" />
-        <span class="item" style="--i: 7"></span>
-        <img class="item" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/97ef9643-5202-41aa-80f0-ceeabccdd099" style="--i: 6" alt="" />
-      </div>
     </section>
-
-    <section class="card-container" id="card-container">
-      <div class="slider">
-        <div class="card" data-tilt>
-          <div class="content">
-            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/10088b1a-c0aa-42a9-8dff-1a692eb597d6" alt="" />
-            <h1>estudo de forma personalizada</h1>
-            <p>
-              Esteja você buscando uma mudança de carreira, empreendedorismo ou
-              desenvolvimento pessoal, um mentor oferece conselhos substanciais e
-              suporte para navegar em seu caminho único.
-            </p>
-            <button class="btn btn-grad">
-              <span>SABER MAIS</span>
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </button>
-          </div>
-        </div>
-
-        <div class="card" data-tilt>
-          <div class="content">
-            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/69fb8584-66a0-4ecd-bae5-dd00015a1ad5" alt="" />
-            <h1>Educação Acelerada</h1>
-            <p>
-              Com bons mentores, o aluno pode facilmente traçar um objetivo claro para o sucesso. Benefeicia suas experiencias pessoais
-            </p>
-            <button class="btn btn-grad">
-              <span>SABER MAIS</span>
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </button>
-          </div>
-        </div>
-
-        <div class="card" data-tilt>
-          <div class="content">
-            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/d49bdb0f-c717-4063-abe4-869cb3bc8b4e" alt="" />
-            <h1>inspiração e motivação</h1>
-            <p>
-             Um mentor não é apenas um conselheiro; eles são uma fonte de inspiração
-              e motivação. Eles podem ajudá-lo a definir e alcançar metas ambiciosas
-              objetivos e ganhe autoconfiança.
-            </p>
-            <button class="btn btn-grad">
-              <span>SABER MAIS</span>
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </button>
-          </div>
-        </div>
-
-        <div class="card" data-tilt>
-          <div class="content">
-            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/fd1d57e3-de8a-438a-9e9a-952ae65a776e" alt="" />
-            <h1>Networking & Conecções</h1>
-            <p>
-            Seu mentor pode abrir portas para conexões e
-oportunidades valiosas. Eles podem apresentá-lo à rede deles e ajudá-lo
-a construir relacionamentos significativos.
-            </p>
-            <button class="btn btn-grad">
-              <span>SABER MAIS</span>
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </button>
-          </div>
-        </div>
-
-        <div class="card" data-tilt>
-          <div class="content">
-            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/331836c0-0d28-48d1-a1c2-b5f5db87fe17" alt="" />
-            <h1>Insights de experts</h1>
-            <p>
-              Tenha acesso a insights da indústria e conhecimento especializado que você
-não encontrará em livros didáticos. Seu mentor pode fornecer sabedoria prática
-que os livros didáticos não podem ensinar.
-            </p>
-            <button class="btn btn-grad">
-              <span>SABER MAIS</span>
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </button>
-          </div>
-        </div>
-
-        <div class="card" data-tilt>
-          <div class="content">
-            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/2d022825-47f9-4e6a-bc97-14b47dc3242f" alt="" />
-            <h1>Confiança & Auto-estima</h1>
-            <p>
-             Um mentor é como um treinador de apoio, aumentando a sua confiança e
-              auto-estima. O incentivo deles pode ajudá-lo a acreditar em seu
-              potencial e enfrentar desafios com vigor.
-            </p>
-            <button class="btn btn-grad">
-              <span>SABER MAIS</span>
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <ul class="control" id="custom-control">
-        <li>
-          <ion-icon name="caret-back-outline"></ion-icon>
-        </li>
-        <li>
-          <ion-icon name="caret-forward-outline"></ion-icon>
-        </li>
-      </ul>
-    </section>
-    <script src="myscript.js"></script>
-  </body>
-  </html>
+        </main>
+        <footer>
+            <img src="./imagens/media-facebook.png" class="midia" alt=""><a class="af" id="facebook">Facebook</a>
+            <img src="./imagens/media-instagram.png" class="midia" alt=""><a class="af" id="Instagram">Instagram</a>
+            <img src="./imagens/media-whatsapp.png" class="midia" id="whatsapp-img" alt=""><a class="af" id="whatsapp">WhatsApp</a>
+        </footer>
+    </body>
+</html>
+ <!--    Nossa Estrutura Educacional
+                
+                Educação Infantil:
+                
+                Creche (2 anos)
+                
+                Creche (3 anos)
+                
+                Jardim 1
+                
+                Jardim 2
+                
+                Ensino Fundamental:
+                
+                Do 1º ao 9º ano
+                
+                Ensino Médio:
+                
+                Do 1º ao 3º ano
+        -->

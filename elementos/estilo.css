@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'exp';
+    src: url('./poppins-extra-bold.ttf');
+}
+
+body {
+    font-family: poppins;
+    background-image: linear-gradient(#00bf62, #004b27);
+    color: white;
+    margin: 0 auto;
+    padding: 15px;
+    max-width: 1400px;
+
+}
+
+a {
+    color: white;
+}
+
+.af {
+    padding: 15px;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    position: fixed;
+    background-color: #00bf62;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 1px 1px 10px black;
+    padding-left: 10px;
+}
+.li-cb {
+    display: inline-block;
+    margin: 10px;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.li-cb:hover {
+    color: #00bf62;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+
+}
+
+.logo {
+    width: 70px;
+    padding: 2px;
+    border-radius: 100px;
+    box-shadow: 2px 2px 10px #000;
+
+}
+
+.matricula-bt:hover {
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #002e18;
+    position: static;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.imagem-principal {
+    width: 100%;
+    padding-top: 80px;
+}
+
+.Sobre {
+    padding: 40px;
+    border-left: 10px solid #005408;
+    margin: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#pesquisa-li {
+    background-color: white;
+}
+
+.pesquisa-img {
+    width: 25px;
+    margin: 0;
+    margin-top: -10px;
+    margin-bottom: -5px;
+}
+
+.pesquisa-txt {
+    background-color: white;
+    width: 70px;
+    height: 40px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    margin-right: -10px;
+    border-radius: 20px;
+    border: none;
+}
+
+.pesquisa-txt::placeholder {
+    color: #00bf62;
+    font-family: poppins;
+}
+
+.pesquisa-txt:focus {
+    outline: 0;
+}
+
+.titulo-escola {
+    display: flex;
+    flex-direction: row;
+    font-size: 28px;
+    font-family: exp;
+    padding-left: 40px;
+    margin-bottom: -20px;
+    text-shadow: 2px 2px 5px #000;
+}
+.lista-extracurriculares{
+    margin-left: 20px;
+font-size:18px;
+}
+.midia{
+    width: 30px;
+    margin-left: 10px;
+    margin-right: -15px;
+}
+iframe{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto ;
+    height: 380px;
+}
+h2{
+   font-size: 35px; 
+}
+.passeios{
+    display: flex;
+    flex-direction: column;
+    width:450px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#whatsapp-img{
+    rotate:90deg;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ max-width: 100px;
+    display: inline-flex;
+    background-color: white;
+    
+    width: 100%;
+border-radius: 20px;
+border: none;
+    */

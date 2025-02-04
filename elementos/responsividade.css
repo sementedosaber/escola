@@ -1,0 +1,48 @@
+@media screen and (max-width: 760px){
+.cabecalho{
+width:100%;
+    
+    }
+    body{
+        max-width: 760px;
+    }
+    .logo{
+        width: 60px;
+    }
+    .li-cb{
+        margin:0;
+        padding:0;
+        display:inline-block;
+    }
+    .pesquisa-txt{
+        width: 68px;
+        height: auto;
+        margin-right: 0;
+    }
+    .pesquisa-img {
+        width: 25px;
+        margin: 0;
+        margin-top: -5px;
+        margin-bottom: -10px;
+    }
+    .imagem-principal {
+        width: 150%;
+        padding-top: 80px;
+    }
+    .titulo-escola{
+        font-size:15px;
+    }
+    .Sobre {
+        width: 100%;
+        margin-left: 0px;
+    }
+    iframe{
+        width: 140%;
+        height: 240px;
+    }
+    
+footer {
+    width: 150%;
+}
+}
+
